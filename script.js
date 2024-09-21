@@ -13,10 +13,10 @@ function toggleMode() {
     // substituir a imagem com uma condição
     if (html.classList.contains('light')) {
         // se tiver light mode, adicionar a imagem light/Obs.: o setAttribute define o atributo.
-        img.setAttribute('src', './assets/Avatar-light.png')
+        img.setAttribute('src', './assets/avatar-light.png')
     } else {
         // se tiver sem light mode, manter a imagem nornal
-        img.setAttribute('src', './assets/Avatar.png')
+        img.setAttribute('src', './assets/avatar.png')
 
     }
 
