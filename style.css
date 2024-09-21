@@ -50,7 +50,8 @@ body * {
 .container {
     width: 100%;
     max-width: 588px;
-    margin: 56px auto 0px; /*Em cima, lados e embaixo*/
+    margin: 56px auto 0px;
+    /*Em cima, lados e embaixo*/
     padding: 0 24px;
 }
 
@@ -96,6 +97,11 @@ body * {
     left: 0;
     transform: translateY(-50%);
     z-index: 1;
+    animation: slide-back 0.2s; /*animação do botão na volta*/
+}
+
+#switch button:hover {
+    outline: 8px solid var(--highlight-color); /*contorno animado do botão*/
 }
 
 #switch span {
@@ -110,8 +116,7 @@ body * {
 }
 
 .light #switch button {
-    right: 0;
-    left: initial;
+    animation: slide-in 0.4s forwards; /*animação do botão*/
     border: 1px solid #000;
 }
 
@@ -173,7 +178,7 @@ footer {
     font-size: 14px;
 }
 
-footer>a {
+footer > a {
     text-decoration: none;
 }
 
@@ -187,5 +192,25 @@ footer>a {
 
     .light {
         --bg-url: url(./assets/bg-desktop-light.jpg)
+    }
+}
+
+/* animation */
+
+@keyframes slide-in {
+    from {
+        left: 0;
+    }
+    to {
+        left: 50%;
+    }
+}
+
+@keyframes slide-back {
+    from {
+        left: 50%;
+    }
+    to {
+        left: 0;
     }
 }
